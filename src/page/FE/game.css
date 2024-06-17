@@ -19,7 +19,7 @@
     align-self: flex-end;
     margin-left: 5rem;
 }
-.gContainer-rules-mobile{
+.gContainer-rules-mobile button{
     display: none;
 }
 
@@ -73,5 +73,8 @@
         display: flex;
         justify-content: center;
         margin-top: 10rem;
+    }
+    .gContainer-rules-mobile button{
+        display: block;
     }
 }

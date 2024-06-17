@@ -1,0 +1,11 @@
+.choice-outer-layer{
+    border-radius: 100%;
+    padding: 1.2rem;
+    box-shadow: 0 -.4rem 0 #00000050 inset;
+}
+.choice-inner-layer{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 100%;
+    box-shadow: 0 .4rem 0 #00000050 inset;
+}

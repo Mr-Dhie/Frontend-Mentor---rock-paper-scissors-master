@@ -1,0 +1,70 @@
+.gContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gContainer-width{
+    width: 70rem;
+    padding: 2rem;
+}
+
+.gContainer__playSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gContainer__rules{
+    display: flex;
+    justify-content: end;
+}
+
+
+.icon_scissors{
+    background: var(--scissors);
+}
+.icon_paper{
+    background: var(--paper);
+}
+.icon_rock{
+    background: var(--rock);
+}
+.icon_lizard{
+    background: var(--lizard);
+}
+.icon_spock{
+    background: var(--spock);
+}
+
+
+@media screen and (max-width:750px){
+    .gContainer-width{
+        width: 100%;
+    }
+    .header__container{
+        width: 100%;
+    }
+    .selection__container{
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width:600px){
+    .triangle-bg{
+        background-size: 15rem;
+    }
+    /* .selection_row1{
+        margin-top: 4rem;
+    } */
+}
+
+@media screen and (max-width:500px){
+    .triangle-bg{
+        background-size: 10rem;
+    }
+    .selection_row2{
+        margin-top: 1rem;
+    }
+}

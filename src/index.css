@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Gradient */
+    --scissors: linear-gradient(0deg, rgba(236, 158, 14, 1) 0%, rgba(236, 169, 34, 1) 100%);
+    --paper: linear-gradient(0deg, rgba(72, 101, 244, 1) 0%, rgba(86, 113, 245, 1) 100%);
+    --rock: linear-gradient(0deg, rgba(220, 46, 78, 1) 0%, rgba(221, 64, 93, 1) 100%);
+    --lizard: linear-gradient(0deg, rgba(131, 79, 227, 1) 0%, rgba(140, 93, 229, 1) 100%);
+    --spock: linear-gradient(0deg, rgba(64, 185, 206, 1) 0%, rgba(82, 190, 209, 1) 100%);
+
+    /* Color */
+    --fontColor: hsl(229, 25%, 31%);
+    --scoreColor: hsl(229, 64%, 46%);
+    --outlineColor: hsl(217, 16%, 45%);
+
+    --fontFamily: "Barlow Semi Condensed", sans-serif;
+
+    /* Background */
+    --bg: radial-gradient(circle at 50% 0%, rgba(31, 55, 86, 1) 0%, rgba(20, 21, 57, 1) 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body{
+    background: var(--bg);
+    /* background-size: 100vw 100vh; */
+    background-size: cover;
+}
+
+html{
+    font-size: 16px;
+}

@@ -22,7 +22,7 @@ export default function CountDown() {
         }, 1000);
 
         return () => clearTimeout(timer);
-    }, [cntDown])
+    })
 
     return (
         <>

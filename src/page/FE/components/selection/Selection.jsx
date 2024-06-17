@@ -16,12 +16,14 @@ export default function Selection() {
     const setCast = consume[5];
     const setCntDown = consume[11];
 
+    const setSelected = consume[13];
 
     function clickHandler(picked) {
         setPlayerPicked(picked);
         setOpponetPicked(Math.floor(Math.random() * 3));
         setCntDown(3);
         setCast(true);
+        setSelected(true); 
     }
 
 

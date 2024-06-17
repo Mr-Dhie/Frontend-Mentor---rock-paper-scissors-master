@@ -7,7 +7,7 @@ export default function Rules() {
     useEffect(()=>{
         modal = document.getElementById("rules_modal");
     })
-    console.log(modal)
+
     function showModal() {
         modal.style.display = "block";
     }

@@ -5,6 +5,7 @@ import './result.css'
 
 export default function Result() {
     const [show, setShow] = useState(false);
+    const [resultAdded, setResultAdded] = useState(false);
     const you = document.getElementById("youPicked")
     const opponent = document.getElementById("opponentPicked")
 
@@ -31,28 +32,30 @@ export default function Result() {
             setShow(true);
         }, 1000);
 
-        if (show) {
-            if (result === "you win") {
-                setScore(score + 1);
-                you.classList.add("winner");
-            } else if (result === "you lose") {
-                setScore(score - 1);
-                opponent.classList.add("winner");
-            } else {
-                setScore(score);
-            }
-        }
-
         return () => clearTimeout(timer);
 
     }, [show])
 
 
+    if (show && !resultAdded) {
+        if (result === "you win") {
+            setScore(score + 1);
+            you.classList.add("winner");
+        } else if (result === "you lose") {
+            setScore(score - 1);
+            opponent.classList.add("winner");
+        }
+
+        setResultAdded(true);
+    }
+
+
+
 
     return (
         <div className="result__container">
-            <div style={{ display: "flex", justifyContent: "center" , flexDirection: "column"}}>
-                <div style={{ display: "flex" ,justifyContent: "center"}}>
+            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                <div style={{ display: "flex", justifyContent: "center" }}>
                     <div id="youPicked" className="result__container-picked">
                         <span>you picked</span>
                         <Icons image={image[playerPicked]} alt={alt[playerPicked]} />

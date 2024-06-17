@@ -38,35 +38,47 @@ export default function Result() {
             } else if (result === "you lose") {
                 setScore(score - 1);
                 opponent.classList.add("winner");
-            }else{
+            } else {
                 setScore(score);
             }
         }
 
         return () => clearTimeout(timer);
 
-    },[show])
+    }, [show])
 
 
 
     return (
         <div className="result__container">
-            <div id="youPicked" className="result__container-picked">
-                <span>you picked</span>
-                <Icons image={image[playerPicked]} alt={alt[playerPicked]} />
-            </div>
-            <div className="result__container-result">
-                {(show) && (
-                    <>
-                        <span>{result}</span>
-                        <button onClick={clickHandler}>play again</button>
-                    </>
-                )}
-            </div>
+            <div style={{ display: "flex", justifyContent: "center" , flexDirection: "column"}}>
+                <div style={{ display: "flex" ,justifyContent: "center"}}>
+                    <div id="youPicked" className="result__container-picked">
+                        <span>you picked</span>
+                        <Icons image={image[playerPicked]} alt={alt[playerPicked]} />
+                    </div>
+                    <div className="result__container-result [ result-desktop ]">
+                        {(show) && (
+                            <>
+                                <span>{result}</span>
+                                <button onClick={clickHandler}>play again</button>
+                            </>
+                        )}
+                    </div>
 
-            <div id="opponentPicked" className="result__container-picked">
-                <span>the house picked</span>
-                <Icons image={image[opponentPicked]} alt={alt[opponentPicked]} />
+                    <div id="opponentPicked" className="result__container-picked">
+                        <span>the house picked</span>
+                        <Icons image={image[opponentPicked]} alt={alt[opponentPicked]} />
+                    </div>
+                </div>
+                <div className="result__container-result [ result-mobile ]">
+                    {(show) && (
+                        <>
+                            <span>{result}</span>
+                            <button onClick={clickHandler}>play again</button>
+                        </>
+                    )}
+                </div>
             </div>
         </div>
     )

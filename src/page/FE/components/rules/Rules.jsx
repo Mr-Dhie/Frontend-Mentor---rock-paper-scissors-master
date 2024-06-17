@@ -1,9 +1,13 @@
 import './rules.css'
 import { image_rules, icon_close } from '../../../assets'
+import { useEffect } from 'react';
 
 export default function Rules() {
-    const modal = document.getElementById("rules_modal");
-
+    let modal;
+    useEffect(()=>{
+        modal = document.getElementById("rules_modal");
+    })
+    console.log(modal)
     function showModal() {
         modal.style.display = "block";
     }

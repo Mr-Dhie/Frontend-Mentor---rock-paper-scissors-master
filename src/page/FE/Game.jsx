@@ -13,8 +13,8 @@ export default function Game() {
     const cntDown = consume[10];
     return (
         <section className="[ gContainer ]">
-            <div className="[ gContainer-width ] ">
-                <div className="[ gContainer__playSection ]">
+            <div className="[ gContainer-content ] ">
+                <div className="gContainer-gameArea">
                     <Header />
 
                     {(cast) ?
@@ -25,9 +25,11 @@ export default function Game() {
                         :
                         <Selection />
                     }
+                    <div className="gContainer-rules-mobile">
+                        <Rules />
+                    </div>
                 </div>
-
-                <div className="[ gContainer__rules ]">
+                <div className="gContainer-rules">
                     <Rules />
                 </div>
             </div>

@@ -1,8 +1,6 @@
 .header__container{
     display: flex;
     justify-content: space-between;
-    /* width: 56%; */
-    width: 38rem;
     padding: 1rem;
     border: .2rem solid var(--outlineColor) ;
     border-radius: .8rem;

@@ -1,19 +1,22 @@
 .result__container{
-    height: 30rem;
     display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    align-items: center;
+    justify-content: center;
+    height: 25rem;
+    margin-top: 5rem;
 }
 
 .result__container-picked{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    margin: 3rem 3rem;
+}
+.result__container-picked span{
+    margin: 2rem 0;
 }
 
 .result__container-picked span{
-    margin-bottom: 3rem;
     color: #fff;
     font-size: 1rem;
     font-family: var(--fontFamily);
@@ -22,16 +25,7 @@
     letter-spacing: .15rem;
 }
 
-.result__container-result{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    margin:1rem;
-}
-
 .result__container-result span{
-    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: .6rem;
@@ -41,9 +35,8 @@
 
 .result__container-result button{
     cursor: pointer;
-    padding: .5rem 3rem;
     text-transform: uppercase;
-    color: rgba(220, 46, 78, 1);
+    color: var(--fontColor);
     font-family: var(--fontFamily);
     font-weight: 600;
     border-radius: .5rem;
@@ -51,11 +44,44 @@
     border: none;
 }
 
+.result__container-result button:hover{
+    color: rgba(220, 46, 78, 1);
+}
+
 
 .result__container .choice-inner-layer img{
-    /* padding: 3rem; */
     height: 5rem;
 }
+
+.result-desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result-desktop span{
+    font-size: 2rem;
+}
+
+.result-desktop button{
+    padding: .5rem 3rem;
+}
+
+.result-mobile{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-mobile span{
+    font-size: 3rem;
+}
+
+.result-mobile button{
+    padding: 1rem 3rem;
+}
+
 
 
 .winner .winner-circle{
@@ -65,15 +91,15 @@
     0 0 .3rem 4em rgba(31, 55, 86, 0.3),
     0 0 .5rem 8em rgba(31, 55, 86, 0.267);
     z-index: -1;
-    animation: scaleAnimation 2s ease; /* Apply animation */
+    animation: scaleAnimation 2s ease; 
 }
 
 @keyframes scaleAnimation {
     0% {
-        transform: scale(1); /* Initial scale */
+        transform: scale(1); 
     }
     50% {
-        transform: scale(1.5); /* Scale to 1.5 times */
+        transform: scale(1.5); 
     }
     100%{
         transform: scale(1);

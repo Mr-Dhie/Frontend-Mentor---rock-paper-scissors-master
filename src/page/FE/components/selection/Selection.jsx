@@ -17,9 +17,9 @@ export default function Selection() {
     const setCntDown = consume[11];
 
 
-    function clickHandler(picked){
+    function clickHandler(picked) {
         setPlayerPicked(picked);
-        setOpponetPicked(Math.floor(Math.random()*3));
+        setOpponetPicked(Math.floor(Math.random() * 3));
         setCntDown(3);
         setCast(true);
     }
@@ -27,12 +27,14 @@ export default function Selection() {
 
     return (
         <div className="selection__container triangle-bg">
-            <div className="selection__container-row [ selection_row1 ]">
-                <Icons image = {image[1]} alt={alt[1]} onClick={()=>clickHandler(1)}/>
-                <Icons image = {image[2]} alt={alt[2]} onClick={()=>clickHandler(2)}/>
-            </div>
-            <div className="selection__container-row [ selection_row2 ] ">
-                <Icons image = {image[0]} alt={alt[0]} onClick={()=>clickHandler(0)}/>
+            <div style={{ marginTop: "1.5rem" }}>
+                <div className="selection__container-row">
+                    <Icons image={image[1]} alt={alt[1]} onClick={() => clickHandler(1)} />
+                    <Icons image={image[2]} alt={alt[2]} onClick={() => clickHandler(2)} />
+                </div>
+                <div className="selection__container-row [ margin ]">
+                    <Icons image={image[0]} alt={alt[0]} onClick={() => clickHandler(0)} />
+                </div>
             </div>
         </div>
     )

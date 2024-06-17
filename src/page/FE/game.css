@@ -5,20 +5,22 @@
     height: 100vh;
 }
 
-.gContainer-width{
-    width: 70rem;
+.gContainer-content{
+    display: flex;  
     padding: 2rem;
+    width: 55rem;
 }
 
-.gContainer__playSection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.gContainer-gameArea{
+    flex: 1;
 }
 
-.gContainer__rules{
-    display: flex;
-    justify-content: end;
+.gContainer-rules{
+    align-self: flex-end;
+    margin-left: 5rem;
+}
+.gContainer-rules-mobile{
+    display: none;
 }
 
 
@@ -38,33 +40,38 @@
     background: var(--spock);
 }
 
-
-@media screen and (max-width:750px){
-    .gContainer-width{
-        width: 100%;
-    }
-    .header__container{
-        width: 100%;
-    }
-    .selection__container{
-        width: 100%;
-        height: auto;
+@media screen and (max-width:920px) {
+    .gContainer-content{
+        flex-direction: column;
     }
 }
-@media screen and (max-width:600px){
-    .triangle-bg{
-        background-size: 15rem;
+
+@media screen and (max-width:780px) {
+    .result__container{
+        flex-direction: column;
     }
-    /* .selection_row1{
-        margin-top: 4rem;
-    } */
+    .result__container-picked{
+        flex-direction: column-reverse;
+    }
+    .result__container .choice-inner-layer img{
+        height: 4rem;
+    }
+    .result-desktop{
+        display: none;
+    }
+    .result-mobile{
+        display: flex;
+    }
 }
 
-@media screen and (max-width:500px){
-    .triangle-bg{
-        background-size: 10rem;
+
+@media screen and (max-width:600px) {
+    .gContainer-rules{ /*todo*/
+        display: none;
     }
-    .selection_row2{
-        margin-top: 1rem;
+    .gContainer-rules-mobile{
+        display: flex;
+        justify-content: center;
+        margin-top: 10rem;
     }
 }
